@@ -12,7 +12,10 @@ public class Product
  
  public Product() 
  {
+		
+		System.out.println("Done with product");
  }
+ 
  public Product(Integer id, String name, float price) 
  {
  this.id = id;
@@ -49,6 +52,8 @@ this.price = price;
 public String toString() 
 {
 return "Product [id=" + id + ", name=" + name + ", price=" + price + "]";
+
+
+
 }
- 
 }

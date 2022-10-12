@@ -11,12 +11,13 @@ public class ProductController
  private ProductService service;
  
  // RESTful API methods for Retrieval operations
+ @CrossOrigin(origins = "http://localhost:3000")
  @GetMapping("/products")
  public List<Product> list() 
  {
  return service.listAll();
  }
- 
+ @CrossOrigin(origins = "http://localhost:3000")
  @GetMapping("/products/{id}")
  public ResponseEntity<Product> get(@PathVariable Integer id) 
  {
@@ -32,7 +33,7 @@ public class ProductController
  } 
  }
  // RESTful API method for Create operation
- 
+ @CrossOrigin(origins = "http://localhost:3000")
  @PostMapping("/products")
  public void add(@RequestBody Product product) 
  {
